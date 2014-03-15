@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>名字:</strong>
+  <%= @idea.name %>
+</p>
+
+<p>
+  <strong>描述:</strong>
+  <%= @idea.description %>
+</p>
+
+<p>
+  <strong>圖片:</strong>
+  <%= image_tag(@idea.picture_url, width: 60) if @idea.picture.present? %>
+</p>
+
+<%= link_to '編輯', edit_idea_path(@idea) %> |
+<%= link_to '返回', ideas_path %>
